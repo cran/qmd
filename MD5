@@ -1,12 +1,12 @@
-d2d452f0eec6337a7c08afb510c7dd86 *DESCRIPTION
+824daaa45004cb43ce6e1a3f9267f5d7 *DESCRIPTION
 b2fc65701107de26e3802203d2c514e1 *NAMESPACE
-6e400a14901748b8d9057a2fb47604e6 *R/ECBC.R
+d67dc92ebe1ec7af93db3eda46c89e70 *R/ECBC.R
 d19b8358e0e88c3e2995cfc23a1aa3c9 *R/RcppExports.R
 efecfae1b18324a64860b1c34037d055 *R/feature_selection.R
-21bb623c5e403d4833ca3c909bdbca34 *R/qmd.R
+56a661f1056cb48e4e75ad40ae720a92 *R/qmd.R
 35ac83e8dfd58cfd0267037daafd2a65 *R/zeta1.R
 394ec7efb83ec4893618d93e4f36e12b *R/zeta1_functions.R
-79ec7b47822ad21d76a223b26a5c0894 *man/ECBC.Rd
+803456e4da41ffc3007a39dd854d2275 *man/ECBC.Rd
 58b259d45808adb5cda75bfdb304b44e *man/dot-CB_make_cumulative_df.Rd
 df41637ad999ba9a1fe4cf2e115bd0c5 *man/dot-EACBC.Rd
 56638836d55fbf6be11e28c7eb69eb7b *man/dot-EACBC_nonzero.Rd

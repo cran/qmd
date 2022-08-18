@@ -17,9 +17,9 @@ ECBC(X, resolution, bin.size = "fixed")
 array of dimension resolution^rho.
 }
 \description{
-The function ECBC computes the mass distribution of the empirical (checkerboard) copula, 
-given a rho-dimensional sample X. If resolution equals sample size, the bi-linearly extended empirical copula is returned. 
-Note, if there are ties in the sample an adjusted empirical copula is calculated. 
+The function ECBC computes the mass distribution of the empirical (checkerboard) copula,
+given a rho-dimensional sample X. If resolution equals sample size, the bi-linearly extended empirical copula is returned.
+Note, if there are ties in the sample an adjusted empirical copula is calculated.
 If bin.size is set to "adaptive" the sizes of the bins will be adjusted to fit the data without overspilling into neighboring bins.
 This might affects the result, but is more efficient with samples having many ties as no adjustment is needed.
 }

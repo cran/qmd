@@ -173,6 +173,14 @@ qmd <- function(X, y,
                      resolution = reso,
                      n = NROW(X))
   invisible(output)
+  }else{
+    output <- list(input = X,
+                   output = y,
+                   `q(X,y)` = res,
+                   results = output,
+                   resolution = reso,
+                   n = NROW(X))
+    invisible(output)
   }
 
 }
