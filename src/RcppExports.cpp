@@ -10,14 +10,14 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// qmdrank
-IntegerVector qmdrank(const NumericVector& x);
-RcppExport SEXP _qmd_qmdrank(SEXP xSEXP) {
+// seq_until_changes
+IntegerVector seq_until_changes(const NumericVector& x);
+RcppExport SEXP _qmd_seq_until_changes(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const NumericVector& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(qmdrank(x));
+    rcpp_result_gen = Rcpp::wrap(seq_until_changes(x));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -121,7 +121,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_qmd_qmdrank", (DL_FUNC) &_qmd_qmdrank, 1},
+    {"_qmd_seq_until_changes", (DL_FUNC) &_qmd_seq_until_changes, 1},
     {"_qmd_ECBC", (DL_FUNC) &_qmd_ECBC, 2},
     {"_qmd_EACBC", (DL_FUNC) &_qmd_EACBC, 2},
     {"_qmd_adaptive_masses", (DL_FUNC) &_qmd_adaptive_masses, 2},

@@ -3,36 +3,16 @@
 #include <vector>
 #include <list>
 
-#include <boost/sort/spreadsort/spreadsort.hpp>
-
-// [[Rcpp::depends(BH)]]
-
 using namespace Rcpp;
 
-//' Equivalent to rank(x, ties.method="max"), but considerably faster
-//'
-//' @param x Numeric Vector
-//' @return A vector of same length of x of elements 1:length(x)
+//' Returns a vector 
+//' 
+//' @param x A usually sorted vector
+//' @return A sequence along x. If consecutive values in x are equal the maximal value is used.
 //' @export
-// [[Rcpp::export]]
-IntegerVector qmdrank(const NumericVector& x) {
+// [[Rcpp::export(seq_until_changes)]]
+IntegerVector seq_until_changes(const NumericVector& x) {
     R_xlen_t n = x.length();
-    // Create an array of pairs (value, position)
-    std::pair<double, R_xlen_t> *sortdata = new std::pair<double, R_xlen_t> [n];
-    for (R_xlen_t i = 0; i < n; i++) {
-        sortdata[i].first = x[i];
-        sortdata[i].second = i;
-    }
-
-    // Sort the array by value
-    boost::sort::spreadsort::float_sort(sortdata, sortdata + n,
-        [](const std::pair<double, R_xlen_t> &a, const unsigned offset) -> boost::int64_t {
-            return boost::sort::spreadsort::float_mem_cast<double, boost::int64_t>(a.first) >> offset;
-        },
-        [](const std::pair<double, R_xlen_t> &a, const std::pair<double, R_xlen_t> &b) -> bool {
-            return a.first < b.first;
-        });
-
     IntegerVector result(n);
 
     // As sortdata is sorted by value the position of (x, orig) is the rank of x
@@ -40,12 +20,12 @@ IntegerVector qmdrank(const NumericVector& x) {
     double last_x = 0;
     R_xlen_t current_ties = 0; // How many times did we have the last x?
     for (R_xlen_t i = 0; i < n; i++) {
-        if (sortdata[i].first == last_x) // Keep counting
+        if (x[i] == last_x) // Keep counting
             current_ties++;
         else {
             for (R_xlen_t j = 0; j < current_ties; j++)
-                result[sortdata[i-1-j].second] = i; // max here, could also do min and avg
-            last_x = x[sortdata[i].second];
+                result[i-1-j] = i; // max here, could also do min and avg
+            last_x = x[i];
             current_ties = 1;
         }
     }
@@ -53,12 +33,11 @@ IntegerVector qmdrank(const NumericVector& x) {
     // The last streak should not be written yet, so we need to do it here
     if (current_ties > 0)
         for (R_xlen_t j = 0; j < current_ties; j++)
-            result[sortdata[n-1-j].second] = n;
+            result[n-1-j] = n;
 
-    delete [] sortdata;
-
-    return result;
+    return result;        
 }
+
 
 // Returns a map between the values of x and the numbers of ties of each element of x
 // Assumes that x contains elements within 1:n where n is the length of x

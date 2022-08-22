@@ -1,9 +1,10 @@
-824daaa45004cb43ce6e1a3f9267f5d7 *DESCRIPTION
+eb938e7c9a3076ebfb3483173feeefe3 *DESCRIPTION
 b2fc65701107de26e3802203d2c514e1 *NAMESPACE
 d67dc92ebe1ec7af93db3eda46c89e70 *R/ECBC.R
-d19b8358e0e88c3e2995cfc23a1aa3c9 *R/RcppExports.R
+8cd5b86b9a40e932150cc347a71f6f2a *R/RcppExports.R
 efecfae1b18324a64860b1c34037d055 *R/feature_selection.R
 56a661f1056cb48e4e75ad40ae720a92 *R/qmd.R
+5caf5ff4e0b46fe432a5ecce9c677950 *R/util.R
 35ac83e8dfd58cfd0267037daafd2a65 *R/zeta1.R
 394ec7efb83ec4893618d93e4f36e12b *R/zeta1_functions.R
 803456e4da41ffc3007a39dd854d2275 *man/ECBC.Rd
@@ -17,7 +18,8 @@ f204a47d330abd6871cf628c38680d7a *man/dot-adaptive_masses.Rd
 7e5a53209814e353c1607573a0de737e *man/dot-sample_CB.Rd
 71f60fec48f380d8904b5be012b10fb8 *man/feature_selection.Rd
 500c8786e09541f424ca9542d1c7a1ca *man/qmd.Rd
-f65f443f7f682bc93dcd6654582b8cea *man/qmdrank.Rd
+8f9f1afd61cae105b54056f2f8810ab3 *man/qmdrank.Rd
+c7628b3521790b5c345d58f547966484 *man/seq_until_changes.Rd
 d4a5b9a1ed0e16750b002693d3a0a96c *man/zeta1.Rd
-8270490cfbac36f56e30739f3e9f0d0f *src/RcppExports.cpp
-a513eac5d42ebf5178390519e5b0d265 *src/code.cpp
+0e02402d10319be2366c4f18193746da *src/RcppExports.cpp
+dc17ffaf38f37c17112ed07ad38d462a *src/code.cpp

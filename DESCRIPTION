@@ -1,7 +1,7 @@
 Package: qmd
 Type: Package
 Title: Quantification of Multivariate Dependence
-Version: 1.1.1
+Version: 1.1.2
 Authors@R: 
     c(person(given = "Nicolas",
 	     family = "Dietrich", 
@@ -24,9 +24,9 @@ License: GPL (>= 2)
 Imports: qad, Rcpp (>= 1.0.6), ggplot2, cowplot, dplyr, utils
 Encoding: UTF-8
 RoxygenNote: 7.1.2
-LinkingTo: Rcpp, BH
+LinkingTo: Rcpp
 NeedsCompilation: yes
-Packaged: 2022-08-17 13:24:47 UTC; HP
+Packaged: 2022-08-22 06:48:50 UTC; HP
 Author: Nicolas Dietrich [aut, cre],
   Florian Griessenberger [aut],
   Robert R. Junker [aut],
@@ -34,4 +34,4 @@ Author: Nicolas Dietrich [aut, cre],
   Wolfgang Trutschnig [aut]
 Maintainer: Nicolas Dietrich <nicolaspascal.dietrich@plus.ac.at>
 Repository: CRAN
-Date/Publication: 2022-08-18 08:40:02 UTC
+Date/Publication: 2022-08-22 09:20:05 UTC
